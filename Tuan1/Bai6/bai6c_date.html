@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Date Form</title>
+<style>
+    body {
+        font-family: Georgia, serif;
+        font-size: 15px;
+        color: #222;
+    }
+    .card {
+        max-width: 300px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 6px;
+    }
+    input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 18px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+    input[type="color"] {
+        width: 60px;
+        height: 30px;
+        margin-bottom: 18px;
+        padding: 0;
+        border: 1px solid #ccc;
+    }
+    input[type="date"] {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 18px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        padding: 6px 24px;
+        background-color: #f0f0f0;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="phone">Telephone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" value="#0000ff">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" value="2015-07-16">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

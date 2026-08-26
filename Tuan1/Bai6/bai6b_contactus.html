@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        max-width: 620px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 20px 25px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    fieldset {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        padding: 12px 15px;
+    }
+    legend {
+        padding: 0 6px;
+        color: #555;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td {
+        padding: 6px 4px;
+        vertical-align: top;
+    }
+    .label {
+        width: 90px;
+        text-align: left;
+        padding-top: 8px;
+    }
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+    select {
+        padding: 4px;
+    }
+    input[type="submit"] {
+        padding: 7px 18px;
+        background-color: #f0f0f0;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Contact Us</h1>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend>Your message:</legend>
+        <table>
+            <tr>
+                <td class="label">To</td>
+                <td><input type="text" name="to" value="Example Cafe"></td>
+            </tr>
+            <tr>
+                <td class="label">Your email</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td class="label">Message</td>
+                <td><textarea name="message" rows="6"></textarea></td>
+            </tr>
+            <tr>
+                <td class="label">Attach File</td>
+                <td><input type="file" name="attachment"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>How you found us:</legend>
+        <table>
+            <tr>
+                <td class="label">How did you hear of us</td>
+                <td>
+                    <select name="referral">
+                        <option>Google</option>
+                        <option>Facebook</option>
+                        <option>A friend</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Newsletter</td>
+                <td>
+                    <input type="checkbox" name="newsletter" id="newsletter" checked>
+                    <label for="newsletter">Ensure this box is checked if you would like to receive email updates</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <input type="submit" value="Send message">
+
+</form>
+
+</body>
+</html>
