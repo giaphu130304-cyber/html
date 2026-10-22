@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bài tập Hệ thống và Công nghệ Web – Trương Gia Phú</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<h1>Bài tập Hệ thống &amp; Công nghệ Web</h1><p style="color:var(--mu)">Trương Gia Phú · DKKHMT18CTT · IUH-FIT</p><div id="w"></div>
+<script>
+const W=[["Tuần 1 – HTML cơ bản",[["Bài 1 – Example Cafe Menu","tuan01/bai1.html"],["Bài 2 – Euler / dessertWEB"],["Bài 3 – Fiddler slide show"],["Bài 4 – Diamond Health Club (image map)","tuan01/bai4.html"],["Bài 5 – Table","tuan01/bai5.html"],["Bài 6 – Form"],["Bài 7 – Smith"]]],
+["Tuần 2 – HTML + CSS",[["Bài 1 – CSS Cafe"],["Bài 2 – Layout Yoko"],["Bài 3 – Sunny Acres"],["Bài 4 – Scrapbooks"]]],
+["Tuần 3 – CSS nâng cao",[["Bài 1 – Sky World"],["Bài 2 – FlowerBox 360"],["Bài 3 – Autumn Travel"]]],
+["Tuần 4 – Bootstrap",[["Bài 1 – Grid / Thumbnails / Table"],["Bài 2 – Form / Navbar"],["Bài 3 – Modal"]]],
+["Tuần 5 – Bootstrap",[["Bài 1 – Restaurant / Magazine"],["Bài 2 – Website Feane"]]],
+["Tuần 6 – JavaScript cơ bản",[["Bài 1 – Prompt","tuan06/bai1.html"],["Bài 2b – Phép tính cơ bản","tuan06/bai2b.html"],["Bài 3 – Đổi hình ngẫu nhiên","tuan06/bai3.html"]]],
+["Tuần 7 – jQuery",[["Bài 1 – Gallery","tuan07/bai1.html"],["Bài 2 – Form tương tác"],["Bài 3 – Regex"]]],
+["Tuần 8 – Form + Regex",[["Bài 1a – Form đăng ký","tuan08/bai1.html"],["Bài 2 – Giỏ hoa"],["Bài 3 – Form nhập bảng","tuan08/bai3.html"]]],
+["Tuần 9 – Tổng hợp",[["Bài 1 – Học kỳ quân đội","tuan09/bai1.html"],["Bài 2 – Danh sách Tour + Modal","tuan09/bai2.html"]]],
+["Tuần 10 – Ôn tập",[["Bài 1"],["Bài 2"]]]];
+document.getElementById("w").innerHTML=W.map(([t,l])=>`<h2>${t}</h2><ul>${l.map(([n,h])=>h?`<li><a href="${h}">${n}</a></li>`:`<li style="color:var(--mu)">${n} <small>(sắp làm)</small></li>`).join("")}</ul>`).join("");
+</script></body></html>
