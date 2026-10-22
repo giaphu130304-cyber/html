@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bài tập Hệ thống và Công nghệ Web – Trương Gia Phú</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<h1>Bài tập Hệ thống &amp; Công nghệ Web</h1><p style="color:var(--mu)">Trương Gia Phú · DKKHMT18CTT · IUH-FIT</p><div id="w"></div>
+<script>
+const W=[["Tuần 1 – HTML cơ bản",[["Bài 1 – Example Cafe Menu","tuan01/bai1.html"],["Bài 2a – Euler","tuan01/bai2a.html"],["Bài 2b – dessertWEB","tuan01/bai2b.html"],["Bài 3 – Fiddler slide show","tuan01/bai3/home.html"],["Bài 4 – Diamond Health Club (image map)","tuan01/bai4/home.html"],["Bài 5 – Table (a, b)","tuan01/bai5.html"],["Bài 6 – Form","tuan01/bai6.html"],["Bài 7 – Smith","tuan01/bai7.html"]]],
+["Tuần 2 – HTML + CSS",[["Bài 1 – CSS Cafe","tuan02/bai1.html"],["Bài 2 – Layout Yoko","tuan02/bai2.html"],["Bài 3 – Sunny Acres","tuan02/bai3.html"],["Bài 4 – Scrapbooks","tuan02/bai4.html"]]],
+["Tuần 3 – CSS nâng cao",[["Bài 1 – Sky World","tuan03/bai1.html"],["Bài 2 – FlowerBox 360","tuan03/bai2.html"],["Bài 3 – Autumn Travel","tuan03/bai3.html"]]],
+["Tuần 4 – Bootstrap",[["Bài 1 – Grid / Thumbnails / Table","tuan04/bai1.html"],["Bài 2 – Form / Navbar","tuan04/bai2.html"],["Bài 3 – Modal","tuan04/bai3.html"]]],
+["Tuần 5 – Bootstrap",[["Bài 1 – Restaurant / Magazine","tuan05/bai1.html"],["Bài 2 – Website Feane","tuan05/feane/home.html"]]],
+["Tuần 6 – JavaScript cơ bản",[["Bài 1 – Prompt","tuan06/bai1.html"],["Bài 2a – Đăng ký / Đăng nhập","tuan06/dangky.html"],["Bài 2b – Phép tính cơ bản","tuan06/bai2b.html"],["Bài 2c – Checkbox cafe","tuan06/bai2c.html"],["Bài 2d – Form định dạng","tuan06/bai2d.html"],["Bài 3 – Đổi hình ngẫu nhiên","tuan06/bai3.html"]]],
+["Tuần 7 – jQuery",[["Bài 1 – Gallery","tuan07/bai1.html"],["Bài 2 – Form tương tác","tuan07/bai2.html"],["Bài 3 – Regex","tuan07/bai3.html"]]],
+["Tuần 8 – Form + Regex",[["Bài 1a – Form đăng ký","tuan08/bai1.html"],["Bài 1b – Facebook","tuan08/bai1b.html"],["Bài 2 – Giỏ hoa","tuan08/bai2.html"],["Bài 3 – Form nhập bảng","tuan08/bai3.html"]]],
+["Tuần 9 – Tổng hợp",[["Bài 1 – Học kỳ quân đội","tuan09/bai1.html"],["Bài 2 – Danh sách Tour + Modal","tuan09/bai2.html"]]]];
+document.getElementById("w").innerHTML=W.map(([t,l])=>`<h2>${t}</h2><ul>${l.map(([n,h])=>h?`<li><a href="${h}">${n}</a></li>`:`<li style="color:var(--mu)">${n} <small>(sắp làm)</small></li>`).join("")}</ul>`).join("");
+</script></body></html>
