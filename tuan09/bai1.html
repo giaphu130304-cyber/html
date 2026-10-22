@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Học kỳ quân đội hè 2022</title><link rel="stylesheet" href="../assets/style.css">
+<style>#m{display:none;position:fixed;inset:0;background:#0008;padding:16px;overflow:auto}#m.on{display:block}#b{background:var(--bg);max-width:480px;margin:auto;padding:16px;border-radius:8px}</style></head><body>
+<h2>HỌC KỲ QUÂN ĐỘI HÈ 2022</h2><p><a href="#" id="open">Đăng ký</a></p>
+<table><thead><tr><th>STT</th><th>Mã Tour</th><th>Hành trình</th><th>Khởi hành</th><th>Thời gian</th><th>Giá</th><th>Ảnh</th></tr></thead><tbody id="t"></tbody></table>
+<div id="m"><div id="b"><h3>THÔNG TIN HỌC VIÊN</h3><form id="f" novalidate></form></div></div><p><a href="../index.html">← Trang chủ</a></p>
+<script>
+const P={"2 tuần":"5,000,000","4 tuần":"8,000,000","6 tuần":"9,000,000"};const age=v=>(Date.now()-new Date(v))/31557600000;
+const F=[["hv","Họ và tên","text",v=>/^([A-ZÀ-Ỵ][a-zà-ỹ]*)(\s[A-ZÀ-Ỵ][a-zà-ỹ]*)+$/.test(v.trim()),"Từ 2 từ, mỗi từ viết hoa chữ đầu"],["sd","Số điện thoại","text",v=>/^\d{3}-\d{6}$/.test(v),"Định dạng XXX-YYYYYY"],["ns","Ngày sinh","date",v=>v&&age(v)>15&&age(v)<18,"Tuổi phải trên 15 và dưới 18"],["dc","Địa chỉ","text",v=>v.trim()!=="","Bắt buộc nhập"],["kh","Khóa học","select",()=>true,""],["hp","Học phí","text",()=>true,""],["im","Ảnh đại diện","file",v=>/\.(jpg|png|gif)$/i.test(v),"Chỉ nhận jpg, png, gif"]];
+const rows=[["Hoàng Lâm","090008888","20/03/2010","123 Nguyễn Du P5 Gò Vấp TPHCM","6 tuần","8,000,000"]];
+const draw=()=>t.innerHTML=rows.map((r,i)=>`<tr><td>${i+1}</td>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("");draw();
+document.querySelector("thead").innerHTML="<tr><th>STT</th><th>Họ và tên</th><th>SĐT</th><th>Ngày sinh</th><th>Địa chỉ</th><th>Khóa học</th><th>Học phí</th></tr>";
+f.innerHTML=F.map(([i,l,t])=>`<label>${l}</label>`+(t=="select"?`<select id="kh">${Object.keys(P).map(k=>`<option>${k}`).join("")}</select>`:`<input id="${i}" type="${t}"${i=="hp"?" readonly":""}>`)+`<span class="err" id="e_${i}"></span>`).join("")+'<p><button>Lưu</button></p>';
+const fee=()=>hp.value=P[kh.value];kh.onchange=fee;fee();
+open.onclick=e=>{e.preventDefault();m.classList.add("on")};m.onclick=e=>{if(e.target==m)m.classList.remove("on")};
+f.onsubmit=e=>{e.preventDefault();let bad=false;F.forEach(([i,,,ok,msg])=>{const g=ok(document.getElementById(i).value);document.getElementById("e_"+i).textContent=g?"":"(*) "+msg;if(!g)bad=true});if(bad)return;const g=i=>document.getElementById(i).value;rows.push([g("hv"),g("sd"),new Date(g("ns")).toLocaleDateString("vi-VN"),g("dc"),g("kh"),g("hp")]);draw();f.reset();fee();m.classList.remove("on")};
+</script></body></html>
